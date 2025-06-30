@@ -33,7 +33,7 @@ jobs:
       run: |
         syft docker.io/kodekloud/webapp-color:latest -o spdx-json > spdx.json
     - name: upload spdx report
-       uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v4
       with:
         name: spdx-report
         path: spdx.json
